@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\site-packages\pyzbar\zbar_library.py", line 58, in load
+    dependencies, libzbar = load_objects(Path(''))
+                            ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\site-packages\pyzbar\zbar_library.py", line 51, in load_objects
+    cdll.LoadLibrary(str(directory.joinpath(dep)))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\ctypes\__init__.py", line 552, in LoadLibrary
+    return self._dlltype(name)
+           ~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'libiconv.dll' (or one of its dependencies). Try using the full path with constructor syntax.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Abhi Ram\OneDrive\Desktop\3.2\fraud_detection_using_ML\debug_run.py", line 6, in <module>
+    import app
+  File "C:\Users\Abhi Ram\OneDrive\Desktop\3.2\fraud_detection_using_ML\Python scripts\app.py", line 30, in <module>
+    import pyzbar.pyzbar # Import the pyzbar module for decoding QR codes
+    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\site-packages\pyzbar\pyzbar.py", line 7, in <module>
+    from .wrapper import (
+    ...<9 lines>...
+    )
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\site-packages\pyzbar\wrapper.py", line 151, in <module>
+    zbar_version = zbar_function(
+        'zbar_version',
+    ...<2 lines>...
+        c_uint_p,    # minor
+    )
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\site-packages\pyzbar\wrapper.py", line 148, in zbar_function
+    return prototype((fname, load_libzbar()))
+                             ~~~~~~~~~~~~^^
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\site-packages\pyzbar\wrapper.py", line 127, in load_libzbar
+    libzbar, dependencies = zbar_library.load()
+                            ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\site-packages\pyzbar\zbar_library.py", line 60, in load
+    dependencies, libzbar = load_objects(Path(__file__).parent)
+                            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\site-packages\pyzbar\zbar_library.py", line 54, in load_objects
+    libzbar = cdll.LoadLibrary(str(directory.joinpath(fname)))
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\ctypes\__init__.py", line 552, in LoadLibrary
+    return self._dlltype(name)
+           ~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\ctypes\__init__.py", line 433, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\ctypes\__init__.py", line 451, in _load_library
+    return _LoadLibrary(self._name, winmode)
+FileNotFoundError: Could not find module 'C:\Users\Abhi Ram\AppData\Local\Programs\Python\Python314\Lib\site-packages\pyzbar\libzbar-64.dll' (or one of its dependencies). Try using the full path with constructor syntax.
