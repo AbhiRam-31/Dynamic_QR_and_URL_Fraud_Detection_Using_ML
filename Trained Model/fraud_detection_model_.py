@@ -88,10 +88,10 @@ feature_names = [
     "path_length", "has_query", "has_fragment",
     "domain_age_days", 
     "is_young_domain",
-    "num_redirects",               # <-- ADDED dynamicFeature 3
-    "is_final_domain_different",   # <-- ADDED dynamic Feature 4
-    "is_https_valid",              # <-- ADDED dynamic Feature 5
-    "http_response_code"           # <-- ADDED dynamic Feature 6
+    "num_redirects",               # <--  dynamicFeature 3
+    "is_final_domain_different",   # <--  dynamic Feature 4
+    "is_https_valid",              # <--  dynamic Feature 5
+    "http_response_code"           # <--  dynamic Feature 6
 ]
 EXPECTED_FEATURE_COUNT = len(feature_names) # This will now be 22
 
@@ -315,10 +315,10 @@ class HybridFraudDetector:
                 has_fragment,
                 domain_age_days,
                 is_young_domain,
-                num_redirects,               # <-- ADDED Dynamic feature
-                is_final_domain_different,   # <-- ADDED Dynamic feature
-                is_https_valid,              # <-- ADDED Dynamic feature
-                http_response_code           # <-- ADDED Dynamic feature
+                num_redirects,               # <--  Dynamic feature
+                is_final_domain_different,   # <--  Dynamic feature
+                is_https_valid,              # <--  Dynamic feature
+                http_response_code           # <--  Dynamic feature
             ]
 
             # --- CHECK: Verify the number of extracted features matches the defined count ---
